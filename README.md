@@ -21,6 +21,13 @@ This repository is intended for public app distribution. The application source 
   </tr>
 </table>
 
+## Support
+
+If you find Hermes Mac useful, you can support development on Ko-fi.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/06062001)
+
+
 ## Features
 
 ### Native macOS Interface
@@ -132,3 +139,4 @@ hermes skills config
 ## Status
 
 Hermes Mac is under active development. Public releases may change as the Hermes CLI and gateway workflows evolve.
+
