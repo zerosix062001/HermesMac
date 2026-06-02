@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="appicon.webp" alt="Hermes Mac" width="128" />
+</div>
+
 # Hermes Mac
 
 Hermes Mac is a native macOS desktop app for running and managing Hermes agents from a polished SwiftUI interface. It is designed for people who keep Hermes on local or remote machines and want a comfortable Mac app for chat, session history, SSH access, approvals, profiles, and skills.
