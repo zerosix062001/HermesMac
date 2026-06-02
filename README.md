@@ -4,6 +4,19 @@ Hermes Mac is a native macOS desktop app for running and managing Hermes agents 
 
 This repository is intended for public app distribution. The application source code is not included here.
 
+## Screenshots
+
+<table>
+  <tr>
+    <td><img src="screenshots/darkmode.webp" alt="Dark mode" /></td>
+    <td><img src="screenshots/lightmode.webp" alt="Light mode" /></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/themes.webp" alt="Themes" /></td>
+    <td><img src="screenshots/lightthemes.webp" alt="Light themes" /></td>
+  </tr>
+</table>
+
 ## Features
 
 ### Native macOS Interface
