@@ -2,9 +2,9 @@
   <img src="appicon.webp" alt="Hermes Mac" width="128" />
 </div>
 
-# Hermes Mac
+# HermesMac
 
-Hermes Mac is a native macOS desktop app for running and managing Hermes agents from a polished SwiftUI interface. It is designed for people who keep Hermes on local or remote machines and want a comfortable Mac app for chat, session history, SSH access, approvals, profiles, and skills.
+HermesMac is a native macOS desktop app for running and managing Hermes agents from a polished SwiftUI interface. It is designed for people who keep Hermes on local or remote machines and want a comfortable Mac app for chat, session history, SSH access, approvals, profiles, and skills.
 
 This repository is intended for public app distribution. The application source code is not included here. HermesMac is not affiliated with Nous Research or Hermes Agent.
 
@@ -23,7 +23,7 @@ This repository is intended for public app distribution. The application source 
 
 ## Support
 
-If you find Hermes Mac useful, you can support development on Ko-fi.
+If you find HermesMac useful, you can support development on Ko-fi.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/06062001)
 
@@ -102,7 +102,7 @@ Hermes Mac delegates authentication and remote access to OpenSSH. It does not ma
 
 ## Distribution
 
-Download the latest Hermes Mac app build from this repository's releases page, then move `Hermes Mac.app` to your Applications folder.
+Download the latest Hermes Mac app build from this repository's releases page, then move `HermesMac.app` to your Applications folder.
 
 If macOS Gatekeeper blocks the app on first launch, open System Settings and allow the app from Privacy & Security, or right-click the app and choose Open.
 
@@ -139,5 +139,5 @@ hermes skills config
 
 ## Status
 
-Hermes Mac is under active development. Public releases may change as the Hermes CLI and gateway workflows evolve.
+HermesMac is under active development. Public releases may change as the Hermes CLI and gateway workflows evolve.
 
