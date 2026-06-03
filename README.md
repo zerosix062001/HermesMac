@@ -44,6 +44,7 @@ If you find Hermes Mac useful, you can support development on Ko-fi.
 - Add, edit, and manage multiple SSH connections.
 - Uses the normal macOS/OpenSSH stack for authentication.
 - Supports `~/.ssh/config`, ssh-agent, Keychain-backed keys, custom SSH users, hosts, ports, and optional key paths.
+- Basically if you can login with `ssh user@host` without a password, this app will work.
 - Per-connection status indicators for disconnected, connecting, connected, and failed states.
 
 ### Chat Sessions
