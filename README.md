@@ -6,7 +6,7 @@
 
 Hermes Mac is a native macOS desktop app for running and managing Hermes agents from a polished SwiftUI interface. It is designed for people who keep Hermes on local or remote machines and want a comfortable Mac app for chat, session history, SSH access, approvals, profiles, and skills.
 
-This repository is intended for public app distribution. The application source code is not included here.
+This repository is intended for public app distribution. The application source code is not included here. HermesMac is not affiliated with Nous Research or Hermes Agent.
 
 ## Screenshots
 
