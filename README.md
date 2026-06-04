@@ -4,7 +4,7 @@
 
 # HermesMac
 
-HermesMac is a native macOS desktop app for running and managing Hermes agents from a polished SwiftUI interface. It is designed for people who keep Hermes on local or remote machines and want a comfortable Mac app for chat, session history, SSH access, approvals, profiles, and skills.
+HermesMac is a native macOS desktop app for running and managing Hermes agents from a polished SwiftUI interface. It is designed for people who keep Hermes on local or remote machines and want a comfortable Mac app for chat.
 
 This repository is intended for public app distribution. The application source code is not included here. HermesMac is not affiliated with Nous Research or Hermes Agent.
 
@@ -37,25 +37,23 @@ If you find HermesMac useful, you can support development on Ko-fi.
 - Connection tabs for switching between Hermes environments.
 - Light and dark mode friendly visual styling.
 - Profile-aware themes and avatars.
+- Some features require the Hermes API to be enabled and running on the target profile.
 
-### Local and SSH Connections
+### SSH Connections
 
-- Connect to a local Hermes installation or a remote Hermes host over SSH.
+- Connect to any Hermes installation, local or remote via SSH.
 - Add, edit, and manage multiple SSH connections.
 - Uses the normal macOS/OpenSSH stack for authentication.
-- Supports `~/.ssh/config`, ssh-agent, Keychain-backed keys, custom SSH users, hosts, ports, and optional key paths.
 - Basically if you can login with `ssh user@host` without a password, this app will work.
-- Per-connection status indicators for disconnected, connecting, connected, and failed states.
 
 ### Chat Sessions
 
 - Start new Hermes chats from the Mac app.
-- Resume existing Hermes sessions when remote session IDs are available.
+- Resume existing Hermes sessions.
 - Select Hermes profiles per connection.
 - Chat in a clean bubble interface or switch into terminal chat mode for the same session.
 - Pin important chats in the sidebar.
-- Refresh remote sessions on demand.
-- Load older messages from remote Hermes history.
+- Rename or delete sessions.
 
 ### Remote History Sync
 
@@ -82,6 +80,7 @@ If you find HermesMac useful, you can support development on Ko-fi.
 - A working Hermes CLI installation on each local or remote machine you want to control.
 - SSH access for remote hosts.
 - OpenSSH configured on macOS for remote connections.
+- Optional API access to enable all features.
 
 For remote hosts, configure SSH the same way you normally would in Terminal. For example:
 
@@ -96,9 +95,23 @@ Host hermes-vps
 
 Then add that host in Hermes Mac using the same user, host, port, and optional key path.
 
+## API
+
+Hermes API is optional, but provides the best experience. An API server and gateway is requires for every profile, and they all need to be running on seperate ports. See here for more information on how to set up Hermes API: https://hermes-agent.nousresearch.com/docs/user-guide/features/api-server#multi-user-setup-with-profiles
+
+Example Hermes profile.env file to enable API:
+
+```apiconfig
+API_SERVER_ENABLED=true
+API_SERVER_PORT=8643
+API_SERVER_KEY=alice-secret
+```
+
 ## How It Works
 
 Hermes Mac delegates authentication and remote access to OpenSSH. It does not manage private keys itself. For chat and history features, the app talks to the Hermes installation on the selected machine and reads Hermes profile, session, skill, and message metadata when those files are available.
+
+If the API is enabled, the app can take advantage of it to provide a richer experience, for example chat bubbles.
 
 ## Distribution
 
@@ -127,15 +140,6 @@ If macOS Gatekeeper blocks the app on first launch, open System Settings and all
 - Confirm Hermes is installed on the target machine.
 - Confirm the expected profile directories and state files exist under `~/.hermes`.
 - Use Refresh Sessions after changing profiles or remote state.
-
-### Skills Are Missing
-
-- Confirm the selected Hermes profile has skills configured.
-- Use the Hermes CLI on the target machine to manage skill enablement:
-
-```sh
-hermes skills config
-```
 
 ## Status
 
